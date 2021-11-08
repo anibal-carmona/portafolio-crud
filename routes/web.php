@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TestController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Controlador para pruebas
+Route::get('/test', [TestController::class, 'createTestUser']);
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('dashboard');
+});
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::view('/video', 'video')->name('varios.video');
+
 });
