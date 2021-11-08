@@ -34,6 +34,8 @@
     {{-- <link href="{{asset('assets/css/user-rtl.min.css')}}" rel="stylesheet" id="user-style-rtl"> --}}
     <link href="{{asset('assets/css/user.min.css')}}" rel="stylesheet" id="user-style-default">
 
+    @stack('css')
+
     @livewireStyles
 </head>
 
@@ -78,5 +80,7 @@
     <script src="{{asset('vendors/list.js/list.min.js')}}"></script>
     <script src="{{asset('assets/js/theme.js')}}"></script>
     
+    @stack('scripts')
+
     @livewireScripts
 </body>

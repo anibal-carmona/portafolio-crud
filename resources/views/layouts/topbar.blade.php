@@ -26,7 +26,7 @@
             <div class="dropdown-menu dropdown-menu-end py-0" aria-labelledby="navbarDropdownUser">
                 <div class="bg-white dark__bg-1000 rounded-2 py-2">
                     {{-- <span class="dropdown-item text-center">{{ auth()->user()->name }}</span> --}}
-                    <a class="dropdown-item" href="../pages/user/settings.html">Opciones</a>
+                    <a class="dropdown-item" href="#">Opciones</a>
                     <div class="dropdown-divider"></div>
 
                     <form action="/logout" method="POST">

@@ -28,104 +28,63 @@
                         </div>
                     </div>
                     <!-- parent pages-->
-                    <a class="nav-link" href="../app/calendar.html" role="button" aria-expanded="false">
+                    <a class="nav-link {{  request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}" role="button" aria-expanded="false">
                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                    class="fas fa-calendar-alt"></span></span><span
-                                class="nav-link-text ps-1">Calendar</span>
+                                    class="fas fa-chart-pie"></span></span><span
+                                class="nav-link-text ps-1">Inicio</span>
                         </div>
                     </a>
 
-                    <!-- parent pages-->
-                    <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse"
-                        aria-expanded="false" aria-controls="dashboard">
-                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                    class="fas fa-chart-pie"></span></span><span
-                                class="nav-link-text ps-1">Dashboard</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse false" id="dashboard">
-                        <li class="nav-item"><a class="nav-link" href="../index.html" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Default</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="../dashboard/analytics.html"
-                                aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Analytics</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="../dashboard/crm.html" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">CRM</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="../dashboard/e-commerce.html"
-                                aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">E
-                                        commerce</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="../dashboard/project-management.html"
-                                aria-expanded="false">
-                                <div class="d-flex align-items-center"><span
-                                        class="nav-link-text ps-1">Management</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="../dashboard/saas.html" aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">SaaS</span>
-                                </div>
-                            </a>
-                            <!-- more inner pages-->
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="nav-item">
                     <!-- label-->
                     <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
-                        <div class="col-auto navbar-vertical-label">App2
+                        <div class="col-auto navbar-vertical-label">App
                         </div>
                         <div class="col ps-0">
                             <hr class="mb-0 navbar-vertical-divider" />
                         </div>
                     </div>
-                    <!-- parent pages--><a class="nav-link active" href="../pages/starter.html" role="button"
+                    <!-- parent pages--><a class="nav-link" href="#" role="button"
                         aria-expanded="false">
                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                    class="fas fa-flag"></span></span><span class="nav-link-text ps-1">Starter</span>
+                                    class="fas fa-plane"></span></span><span class="nav-link-text ps-1">Remuneración</span>
                         </div>
                     </a>
-                    <!-- parent pages--><a class="nav-link" href="../pages/landing.html" role="button"
-                        aria-expanded="false">
-                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                    class="fas fa-globe"></span></span><span class="nav-link-text ps-1">Landing</span>
+
+                    <!-- parent pages-->
+                    <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="{{  request()->routeIs('varios.*') ? 'true' : 'false' }}" aria-controls="dashboard">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-fire"></span></span>
+                            <span class="nav-link-text ps-1">Varios</span>
                         </div>
                     </a>
-                    <!-- parent pages--><a class="nav-link dropdown-indicator" href="#user" role="button"
-                        data-bs-toggle="collapse" aria-expanded="false" aria-controls="user">
-                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                    class="fas fa-user"></span></span><span class="nav-link-text ps-1">User</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse false" id="user">
-                        <li class="nav-item"><a class="nav-link" href="../pages/user/profile.html"
-                                aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Profile</span>
+                    <ul class="nav collapse false {{  request()->routeIs('varios.*') ? 'show' : '' }}" id="dashboard">                        
+                        <li class="nav-item"><a class="nav-link {{  request()->routeIs('varios.video') ? 'active' : '' }}" href="{{ route('varios.video') }}" aria-expanded="false">
+                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Video</span>
                                 </div>
                             </a>
                             <!-- more inner pages-->
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="../pages/user/settings.html"
-                                aria-expanded="false">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Settings</span>
+                    </ul>
+
+                    <!-- parent pages--><a class="nav-link dropdown-indicator" href="#user" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="user">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><span class="fas fa-user"></span></span>
+                            <span class="nav-link-text ps-1">User</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse false" id="user">
+                        <li class="nav-item"><a class="nav-link" href="#" aria-expanded="false">
+                                <div class="d-flex align-items-center">
+                                    <span class="nav-link-text ps-1">Profile</span>
+                                </div>
+                            </a>
+                            <!-- more inner pages-->
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#" aria-expanded="false">
+                                <div class="d-flex align-items-center">
+                                    <span class="nav-link-text ps-1">Settings</span>
                                 </div>
                             </a>
                             <!-- more inner pages-->
